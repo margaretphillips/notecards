@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.container-fluid{
+  height:100vh;
+}
+
+.card-header{
+  min-height:80px;
+  height:8vh;
+  overflow:hidden
+}
+
+.card-body{
+  min-height:100px;
+  height:16vh;
+  overflow:hidden
+}
+.notecard-body{
+  max-height:18vh;
+  overflow:hidden
+}
+
+.card-footer{
+  min-height:40px;
+  height:6vh;
+  overflow:hidden
+}
+
+.view_card_body{
+  max-width:96%;
+   min-height:56vh!important;
+    overflow:scroll
+}
+
+.edit_card_body{
+  max-width:96%;
+   min-height:56vh!important;
+    overflow:scroll
+}
+
+.textarea{
+  min-height: 30vh;
+}
+
+.fa {
+    font: normal normal normal 20px/1 FontAwesome!important;
+}
