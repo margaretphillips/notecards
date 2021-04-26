@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "text": "primary",
+        "background": "primary",
+        "color": "white",
+        "icon": "dark",
+        "cat": "light"
+    },
+    {
+        "id": 2,
+        "text": "secondary",
+        "background": "secondary",
+        "color": "light",
+        "icon": "light",
+        "cat": "light"
+    },
+    {
+        "id": 3,
+        "text": "success",
+        "background": "success",
+        "color": "light",
+        "icon": "light",
+        "cat": "light"
+    },
+    {
+        "id": 4,
+        "text": "danger",
+        "background": "danger",
+        "color": "light",
+        "icon": "light",
+        "cat": "light"
+    },
+    {
+        "id": 5,
+        "text": "warning",
+        "background": "warning",
+        "color": "light",
+        "icon": "light",
+        "cat": "light"
+    },
+    {
+        "id": 6,
+        "text": "info",
+        "background": "info",
+        "color": "light",
+        "icon": "light",
+        "cat": "light"
+    },
+    {
+        "id": 7,
+        "text": "dark",
+        "background": "dark",
+        "color": "info",
+        "icon": "light",
+        "cat": "info"
+    },
+    {
+        "id": 8,
+        "text": "white",
+        "background": "white",
+        "color": "light",
+        "icon": "light",
+        "cat": "light"
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "text": "Immediate"
+    },
+    {
+        "id": 2,
+        "text": "High"
+    },
+    {
+        "id": 3,
+        "text": "Medium"
+    },
+    {
+        "id": 4,
+        "text": "Low"
+    },
+    {
+        "id": 5,
+        "text": "Optional"
+    }
+]

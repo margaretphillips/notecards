@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "text": "All Notes"
+    },
+    {
+        "id": 2,
+        "text": "Car"
+    },
+    {
+        "id": 3,
+        "text": "Daily"
+    },
+    {
+        "id": 4,
+        "text": "Financial"
+    },
+    {
+        "id": 5,
+        "text": "Health"
+    },
+    {
+        "id": 6,
+        "text": "Legal"
+    },
+    {
+        "id": 7,
+        "text": "Personal"
+    }
+]
