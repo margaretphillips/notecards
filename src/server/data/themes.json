@@ -3,64 +3,72 @@
         "id": 1,
         "text": "primary",
         "background": "primary",
-        "color": "white",
-        "icon": "dark",
+        "color": "info",
+        "icon": "info",
         "cat": "light"
     },
     {
         "id": 2,
         "text": "secondary",
         "background": "secondary",
-        "color": "light",
-        "icon": "light",
+        "color": "success",
+        "icon": "success",
         "cat": "light"
     },
     {
         "id": 3,
         "text": "success",
         "background": "success",
-        "color": "light",
-        "icon": "light",
-        "cat": "light"
+        "color": "dark",
+        "icon": "dark",
+        "cat": "dark"
     },
     {
         "id": 4,
         "text": "danger",
         "background": "danger",
-        "color": "light",
-        "icon": "light",
-        "cat": "light"
+        "color": "white",
+        "icon": "success",
+        "cat": "white"
     },
     {
         "id": 5,
         "text": "warning",
         "background": "warning",
-        "color": "light",
-        "icon": "light",
-        "cat": "light"
+        "color": "white",
+        "icon": "success",
+        "cat": "white"
     },
     {
         "id": 6,
         "text": "info",
         "background": "info",
-        "color": "light",
-        "icon": "light",
-        "cat": "light"
+        "color": "dark",
+        "icon": "dark",
+        "cat": "dark"
     },
     {
         "id": 7,
         "text": "dark",
         "background": "dark",
-        "color": "info",
-        "icon": "light",
-        "cat": "info"
+        "color": "success",
+        "icon": "success",
+        "cat": "success"
     },
     {
         "id": 8,
+        "text": "light",
+        "background": "light",
+        "color": "primary",
+        "icon": "primary",
+        "cat": "primary"
+    },
+    {
+        "id": 9,
         "text": "white",
         "background": "white",
-        "color": "light",
-        "icon": "light",
-        "cat": "light"
+        "color": "primary",
+        "icon": "primary",
+        "cat": "primary"
     }
 ]

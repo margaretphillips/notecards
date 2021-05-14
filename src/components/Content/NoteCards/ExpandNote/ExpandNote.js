@@ -4,17 +4,17 @@ import { createPortal } from 'react-dom';
 
 
 const expandnote = ({ categories, priorities, themes, note, noteconfig, clicked, changed }) => {
-
-    let classes = 'card bg-light'
-    let editclass = `card-body view_card_body bg-light`
+    const theme = themes.filter((f) => f.id === note.theme)[0]
+    let classes = theme && theme.background ? `card bg-${theme.background}` : `card bg-primary`
+    let editclass = theme && theme.background ? `card-body view_card_body bg-${theme.background}` : `card-body view_card_body bg-primary`
+    let textClass = theme && theme.color ? `text-${theme.color}` : `text-light`
+    let btnClass = theme && theme.icon ? `btn btn-${theme.icon}` : `btn btn-info`
     let action = noteconfig
 
     if (noteconfig === 'edit') {
         action = 'update'
-        editclass = `card-body edit_card_body bg-light`
     } else if (noteconfig === 'add') {
         action = 'create'
-        editclass = `card-body edit_card_body bg-light`
     }
     if (action === 'create') {
 
@@ -79,115 +79,76 @@ const expandnote = ({ categories, priorities, themes, note, noteconfig, clicked,
     return (
         <div className="col-12 d-flex flex-row justify-content-center my-5 px-5 py-5">
             <div className={classes} style={{ 'minWidth': '96%' }}>
-                {noteconfig !== 'edit' && noteconfig !== 'add' ? (
-                    <div className="card-header">
-                        <div className="row">
-                            <div className="col-8">
-                                <div className="form-group">
-                                    <div><h5>{note.title}</h5></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                ) : (
-                    <span></span>
-                )}
                 <div className={editclass}>
                     <div className="row">
                         <div className="col-8">
                             <div className="form-group">
-                                {noteconfig === 'edit' || noteconfig === 'add' ? (
-                                    <React.Fragment>
-                                        <label>Title</label>
-                                        <input
-                                            type="text"
-                                            className="form-control"
-                                            id="title"
-                                            defaultValue={note.title}
-                                        />
-                                    </React.Fragment>
-                                ) : (
-                                    <span></span>
-                                )}
+                                <React.Fragment>
+                                    <h5 className={textClass}>Title</h5>
+                                    <input
+                                        type="text"
+                                        className="form-control"
+                                        id="title"
+                                        defaultValue={note.title}
+                                    />
+                                </React.Fragment>
                             </div>
                             <div className="form-group">
-                                {noteconfig === 'edit' || noteconfig === 'add' ? (
-                                    <React.Fragment>
-                                        <label>Content</label>
-                                        <textarea
-                                            className="form-control textarea"
-                                            id="content"
-                                            defaultValue={note.content} />
-                                    </React.Fragment>
-                                ) : (
-                                    <blockquote>{note.content}</blockquote>
-                                )}
+                                <React.Fragment>
+                                    <h5 className={textClass}>Content</h5>
+                                    <textarea
+                                        className="form-control textarea"
+                                        id="content"
+                                        defaultValue={note.content} />
+                                </React.Fragment>
                             </div>
                         </div>
                         <div className="col-4">
-                            {noteconfig === 'edit' || noteconfig === 'add' ? (
-                                <div className="form-group">
-                                    <React.Fragment>
-                                        <label>Category</label>
-                                        <select className="form-control"
-                                            id="category"
-                                            onChange={setNoteSelect}
-                                            defaultValue={note.category}>
-                                            {categories.map(({ id, text }) => {
-                                                return <option key={id} value={id}>{text}</option>
-                                            })}
-                                        </select>
-                                    </React.Fragment>
-                                </div>
-                            ) : (
-                                <div>
-                                    <h5>Category: {categories.filter((f) => f.id === note.category)[0].text}</h5>
-                                </div>
-                            )}
-                            {noteconfig === 'edit' || noteconfig === 'add' ? (
-                                <div className="form-group">
-                                    <React.Fragment>
-                                        <label>Priority</label>
-                                        <select
-                                            defaultValue={note.priority}
-                                            className="form-control"
-                                            id="priority"
-                                            onChange={setNoteSelect}>
-                                            {priorities.map(({ id, text }) => { return <option key={id} value={id}>{text}</option> })}
-                                        </select>
-                                    </React.Fragment>
-                                </div>
-                            ) : (
-                                <div>
-                                    <h5>Priority: {priorities.map(({ id, text }) => { return id === note.priority ? text : null })}</h5>
-                                </div>
-                            )}
-                            {noteconfig === 'edit' || noteconfig === 'add' ? (
-                                <div className="form-group">
-                                    <React.Fragment>
-                                        <label>Theme</label>
-                                        <select
-                                            defaultValue={note.priority}
-                                            className="form-control"
-                                            id="theme"
-                                            onChange={setNoteSelect}>
-                                            {themes.map(({ id, text }) => { return <option key={id} value={id}>{text}</option> })}
+                            <div className="form-group">
+                                <React.Fragment>
+                                    <h5 className={textClass}>Category</h5>
+                                    <select className="form-control"
+                                        id="category"
+                                        onChange={setNoteSelect}
+                                        defaultValue={note.category}>
+                                        {categories.map(({ id, text }) => {
+                                            return <option key={id} value={id}>{text}</option>
+                                        })}
+                                    </select>
+                                </React.Fragment>
+                            </div>
+                            <div className="form-group">
+                                <React.Fragment>
+                                    <h5 className={textClass}>Priority</h5>
+                                    <select
+                                        defaultValue={note.priority}
+                                        className="form-control"
+                                        id="priority"
+                                        onChange={setNoteSelect}>
+                                        {priorities.map(({ id, text }) => { return <option key={id} value={id}>{text}</option> })}
+                                    </select>
+                                </React.Fragment>
+                            </div>
 
-                                        </select>
-                                    </React.Fragment>
-                                </div>
-                            ) : (
-                                <div>
-                                    <h5>Theme: {note.theme}</h5>
-                                </div>
-                            )}
-                            {noteconfig === 'edit' || noteconfig === 'add' ? (
-                                <div className="form-group">
-                                    <button type="button" className="btn btn-primary" name={action} id={note.id} onClick={createUpdateNote}>{action}</button>
-                                </div>
-                            ) : (
-                                <span></span>
-                            )}
+
+                            <div className="form-group">
+                                <React.Fragment>
+                                    <h5 className={textClass}>Theme</h5>
+                                    <select
+                                        defaultValue={note.theme}
+                                        className="form-control"
+                                        id="theme"
+                                        onChange={setNoteSelect}>
+                                        {themes.map(({ id, text }) => { return <option key={id} value={id}>{text}</option> })}
+                                    </select>
+                                </React.Fragment>
+                            </div>
+
+
+                            <div className="form-group">
+                                <button type="button" className={btnClass} name={action} id={note.id} onClick={createUpdateNote}>{action}</button>
+                            </div>
+
                         </div>
                     </div>
                 </div>

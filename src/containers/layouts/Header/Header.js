@@ -2,7 +2,7 @@ import React from 'react';
 
 const header = (props) => {
     return (
-        <div className="d-flex flex-row justify-content-between align-items-center bg-dark py-3">
+        <div className="d-flex flex-row justify-content-between align-items-center bg-secondary py-3">
             {props.editname === false ? (
                 <div className="text-light d-flex d-inline-flex">
                     <h3 className="mx-3">{props.title}</h3>

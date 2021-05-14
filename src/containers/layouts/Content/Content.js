@@ -9,12 +9,12 @@ const content = (props) => {
         <div>
             <div className="row">
                 <div className="col">
-                    <nav aria-label="breadcrumb">
-                        <ol className="breadcrumb m-0 p-4">
-                            <li className="breadcrumb-item"><a href="/">Home</a></li>
-                            <li className="breadcrumb-item active" aria-current="page">{props.categories.filter((f) => f.id === props.category)[0].text}</li>
-                        </ol>
-                    </nav>
+                    {/* <nav aria-label="breadcrumb"> */}
+                    <ol className="breadcrumb bg-dark m-0 p-4">
+                        <li className="breadcrumb-item"><a class="text-secondary" href="/">Home</a></li>
+                        <li className="breadcrumb-item active text-white" aria-current="page">{props.categories.filter((f) => f.id === props.category)[0].text}</li>
+                    </ol>
+                    {/* </nav> */}
                 </div>
             </div>
             <div className="row">

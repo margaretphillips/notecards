@@ -1,0 +1,164 @@
+$primary: #2f4858!important;
+$secondary: #33658a!important;
+$success: #86bbd8!important;
+$danger: #f26419!important;
+$warning: #f6ae2d!important;
+$info: #489fb5!important;
+$dark: #333333!important;
+$light: #cccccc!important;
+$white: #ffffff!important;
+
+.primary{
+    background: $primary;
+    color: $primary;
+}
+.bg-primary{
+    background: $primary;
+}
+.text-primary{
+    color: $primary;
+}
+.secondary{
+        background: $secondary;
+    color: $secondary;
+}
+.bg-secondary{
+        background: $secondary;
+   
+}
+.text-secondary{
+    
+    color: $secondary;
+}
+.success{
+        background: $success;
+    color: $success;
+}
+.bg-success{
+        background: $success;
+
+}
+.text-success{
+     
+    color: $success;
+}
+.danger{
+        background: $danger;
+    color: $danger;
+}
+.bg-danger{
+        background: $danger;
+   
+}
+.text-danger{
+   
+    color: $danger;
+}
+.warning{
+        background: $warning;
+    color: $warning;
+}
+.bg-warning{
+        background: $warning;
+
+}
+.text-warning{
+
+    color: $warning;
+}
+.info{
+        background: $info;
+    color: $info;
+}
+.bg-info{
+        background: $info;
+}
+.text-info{
+    color: $info;
+}
+.dark{
+        background: $dark;
+    color: $dark;
+}
+.bg-dark{
+        background: $dark;
+}
+.text-dark{
+    color: $dark;
+}
+.light{
+        background: $light;
+    color: $light;
+}
+.bg-light{
+        background: $light;
+}
+.text-light{
+    color: $light;
+}
+.white{
+        background: $white;
+    color: $white;
+}
+.bg-white{
+        background: $white;
+}
+.text-white{
+    color: $white;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+    font-size:12pt;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.container-fluid{
+  min-height:100vh;
+  background-color: $primary;
+
+}
+.card{
+    box-shadow: -6px 7px 6px rgb(22, 23, 41)
+}
+.card-header{
+  min-height:80px;
+  height:8vh;
+  overflow:hidden;
+    font-size:.9rem;
+}
+.card-title{
+    font-size:1.3rem;
+    font-weight: 700;
+}
+.card-body{
+  min-height:100px;
+  height:16vh;
+  overflow:hidden;
+  font-size:.9rem;
+}
+.notecard-body{
+  max-height:18vh;
+  overflow:hidden;
+  font-size:.9rem;
+}
+
+.card-footer{
+  min-height:40px;
+  height:6vh;
+  overflow:hidden
+}
+
+.view_card_body{
+height:56vh!important;
+}
+
+.textarea{
+  min-height: 30vh;
+}
+
+.fa {
+    font: normal normal normal 20px/1 FontAwesome!important;
+}
